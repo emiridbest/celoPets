@@ -1,4 +1,4 @@
-export const contractAddress = "0x0d578F50f73c069F4ae0F1ec17Ab7AFd5c9D0ba7"
+export const contractAddress = "0x7A9A04fFAF4D932aDA0f699fba0Eac270B93B6d5"
 export const wagmiAbi = [
 	{
 		"anonymous": false,
@@ -134,7 +134,7 @@ export const wagmiAbi = [
 	},
 	{
 		"inputs": [],
-		"name": "getAvailablePets",
+		"name": "getAllPets",
 		"outputs": [
 			{
 				"internalType": "uint256[]",

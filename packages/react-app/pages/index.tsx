@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 
 import React, { useEffect, useState } from 'react';
 import Upload from './upload';
@@ -34,20 +35,19 @@ const Home: React.FC = () => {
   const contract = new ethers.Contract(contractAddress, wagmiAbi, signer);
   const [isMobile, setIsMobile] = useState(false);
   const [showAnimation, setShowAnimation] = useState(false);
+  
 
-
-  const handleUploadPet = async (age: number, name: string, breed: string, color: string, description: string, CID: string) => {
+  const addPet = async (age: number, name: string, breed: string, color: string, description: string, CID: string) => {
     // Logic to upload pet to Pinata
     // After uploading, you can refresh the pets list
     const gasLimit = ethers.utils.hexlify(6000000);
     await contract.addPet(age, name, breed, color, description, CID, { gasLimit });
 
-    fetchPets()
   };
 
   const fetchPets = async () => {
     try {
-      const availablePets = await contract.adoptedPets();
+      const availablePets = await contract.getAllPets();
 
       const formattedPets = [];
       for (const petIdBN of availablePets) {
@@ -70,17 +70,17 @@ const Home: React.FC = () => {
         console.log("Adopting pet with id:", pet.id);
         const gasLimit = ethers.utils.hexlify(6000000);
         await contract.adoptPet(petId, { gasLimit });
-  
+
         console.log("Pet adopted:", pet.id);
       }
-  
+
       // Fetch the updated list of pets after adoption
       fetchPets();
     } catch (error) {
       console.error("Error adopting pets:", error);
     }
   };
-  
+
   useEffect(() => {
     if (contract) {
       fetchPets();
@@ -116,7 +116,7 @@ const Home: React.FC = () => {
           ))}
         </div>
 
-        <Upload handleUploadPets={handleUploadPet} />
+        <Upload handleUploadPets={addPet} />
         <Link href="/upload">
           <button
             className={`bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-full shadow-lg transition-all duration-200 ${buttonPosition}`}

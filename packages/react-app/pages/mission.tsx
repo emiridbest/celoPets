@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 
 const MissionStatementPage: React.FC = () => {
@@ -7,9 +8,7 @@ const MissionStatementPage: React.FC = () => {
                 <div className="p-4 bg-white rounded-lg shadow-md">
                     <h2 className="text-2xl font-semibold mb-2">Our Mission</h2>
                     <p className="text-gray-600">
-                        A mission statement should succinctly capture the purpose and direction of your organization. It should answer the question: "Why does our organization exist?" Here's an example:
-
-                        "Empower individuals through innovative technology solutions that enhance their lives and drive positive change in our communities."      </p>
+                        Building a better world for pets via innovative technology therby fostering healthy bond and peaceful coexstence between humans and pets.     </p>
                 </div>
                 <div className="p-4 bg-white rounded-lg shadow-md">
                     <h2 className="text-2xl font-semibold mb-2">Our Vision</h2>
@@ -27,26 +26,14 @@ const MissionStatementPage: React.FC = () => {
                 <div className="p-4 bg-white rounded-lg shadow-md">
                     <h2 className="text-2xl font-semibold mb-2">Core Values</h2>
                     <p className="text-gray-600">
-                        Core values define the beliefs and principles that guide your organization's behavior and decisions. They shape your company culture and reflect your organization's identity. Here are a few possible core values:
-
-                        Innovation: We continuously seek creative solutions to challenges, embracing change as an opportunity for growth.
-
-                        Integrity: We uphold honesty, transparency, and ethical conduct in all interactions, earning the trust of our customers and partners.
-
-                        Collaboration: We believe in the power of teamwork and value diverse perspectives to foster innovation and achieve shared goals.
-
-                        Customer-Centric: We prioritize understanding and meeting the needs of our customers, ensuring their success is our success.
-
-                        Sustainability: We are committed to reducing our environmental footprint and contributing po          </p>
-                </div>
+                        Innovation: We continuously seek creative solutions to challenges, embracing change as an opportunity for growth. Integrity: We uphold honesty, transparency, and ethical conduct in all interactions, earning the trust of our customers and partners. Collaboration: We believe in the power of teamwork and value diverse perspectives to foster innovation and achieve shared goals.  </p>  </div>
                 <div className="p-4 bg-white rounded-lg shadow-md">
                     <h2 className="text-2xl font-semibold mb-2">Goals</h2>
                     <p className="text-gray-600">
-                        Goals provide a roadmap for what your organization aims to achieve. They should be specific, measurable, achievable, relevant, and time-bound (SMART). Here are a few examples:
 
-                        Short-Term Goal: Launch a new product within the next six months that addresses a pressing customer need and generates at least 1,000 sign-ups.
+                        Short-Term Goal: Launch at a production scale within the next six months that addresses a pressing customer need and generates at least 1,000 sign-ups.
 
-                        Medium-Term Goal: Increase annual revenue by 20% through expanding our customer base and enhancing customer retention strategies over the next two years.
+                        Medium-Term Goal: Provide homes for 100 pets within one year from launch date..
 
                         Long-Term Goal: Establish a global presence in key markets by opening three international offices within the next five years.
 

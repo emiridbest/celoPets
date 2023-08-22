@@ -30,8 +30,11 @@ const Upload: React.FC<UploadProps> = ({ handleUploadPets }) => {
       const data = new FormData();
       data.append('file', selectedFile);
       data.append('pinataOptions', JSON.stringify({ wrapWithDirectory: false }));
-
+  
       try {
+        const timestamp = new Date().toISOString(); // Generate a unique timestamp
+        const content = selectedFile.name + timestamp; // Modify content
+  
         const response = await fetch(
           "https://api.pinata.cloud/pinning/pinFileToIPFS",
           {
@@ -43,17 +46,17 @@ const Upload: React.FC<UploadProps> = ({ handleUploadPets }) => {
             body: data,
           }
         );
-
+  
         console.log("Pinata API Response Status:", response.status);
         const responseData = await response.json();
         console.log("Pinata API Response Data:", responseData);
-
+  
         if (!response.ok) {
           console.error("Error uploading to Pinata:", responseData.error);
           setIsUploading(false);
           return;
         }
-
+  
         const newPinataCID = responseData.IpfsHash;
         setPinataCID(newPinataCID);
         setIsUploading(false);
@@ -63,6 +66,7 @@ const Upload: React.FC<UploadProps> = ({ handleUploadPets }) => {
       }
     }
   };
+  
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
     handleUploadPets(ageInput, nameInput, breedInput, colorInput, description, pinataCID);
