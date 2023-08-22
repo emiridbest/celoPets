@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 contract PetShop {
     struct Pet {
-        uint id;
+        uint256 id;
         uint8 age;
         string name;
         string breed;
@@ -15,10 +15,10 @@ contract PetShop {
     }
 
     Pet[] public petList;
-    mapping(uint => address) public owner;
+    mapping(uint256 => address) public owner;
 
     event PetUploaded(
-        uint id,
+        uint256 id,
         uint8 age,
         string name,
         string breed,
@@ -36,7 +36,7 @@ contract PetShop {
         string memory description,
         string memory CID
     ) external {
-        uint petId = petList.length;
+        uint256 petId = petList.length;
         petList.push(
             Pet(
                 petId,
@@ -59,20 +59,16 @@ contract PetShop {
         require(!petList[petId].adopted, "Pet already adopted");
         require(msg.sender != owner[petId], "You already own this pet");
         petList[petId].adopted = true;
-          petList[petId].adopter = msg.sender;
+        petList[petId].adopter = msg.sender;
 
         emit PetAdopted(petId, msg.sender);
     }
 
-    function getAvailablePets() external view returns (uint256[] memory) {
+    function getAllPets() external view returns (uint256[] memory) {
         uint256[] memory availablePetIds = new uint256[](petList.length);
-        uint256 count = 0;
 
         for (uint256 i = 0; i < petList.length; i++) {
-            if (!petList[i].adopted) {
-                availablePetIds[count] = i + 1;
-                count++;
-            }
+            availablePetIds[i] = petList[i].id;
         }
 
         return availablePetIds;
