@@ -1,36 +1,35 @@
-# React Framework + NextJS | Celo Composer
+# Welcome to Celo Pets
 
-Celo Composer support React boilerplate template with TailwindCSS. This is a starter kit with no additional boilerplate code. It's a perfect starter kit to get your project started on Celo blockchain.
+Here is a link to the live demo
 
-## Setup & Installation
+https://youtu.be/ogRh_5rPwOw
 
-```bash
-yarn
-```
+# Instructions
+update .env file and provide variables for 
 
-Run `yarn` or `npm install` to install all the required dependencies to run the dApp.
+- NEXT_PUBLIC_PINATA_API_KEY=
 
-> React + Tailwind CSS Template does not have any dependency on hardhat and truffle.
-> This starterkit does not include connection of Hardhat/Truffle with ReactJS. It's up to the user to integrate smart contract with ReactJS. This gives user more flexibily over the dApp.
+- NEXT_PUBLIC_PINATA_API_SECRET=
 
--   To start the dApp, run the following command.
+- NEXT_PUBLIC_PINATA_JWT_TOKEN=
 
-```bash
-yarn react-dev
-```
+- NEXT_PUBLIC_WC_PROJECT_ID=
 
-## Dependencies
+![1](https://github.com/emiridbest/celoPets/assets/6362475/a9a8dac0-9f39-437b-a223-4f0f59d19001)
 
-### Default
 
--   [Next.js](https://nextjs.org/) app framework
--   [TailwindCSS](https://tailwindcss.com/) for UI
--   [rainbowkit-celo](https://www.npmjs.com/package/@celo/rainbowkit-celo), a plugin to help rainbowkit developers support the CELO protocol faster.
+![3](https://github.com/emiridbest/celoPets/assets/6362475/57ce1072-0ce8-48f4-82f2-a8205476f8fb)
 
-## Architecture
+![4](https://github.com/emiridbest/celoPets/assets/6362475/06dec6c6-a814-48f6-9e30-6d776c374828)
 
--   `/pages` includes the main application components (specifically `index.tsx` and `_app.tsx`)
-    -   `_app.tsx` includes configuration
-    -   `index.tsx` is the main page of the application
--   `/components` includes components that are rendered in `index.tsx`
--   `/public` includes static files
+![5](https://github.com/emiridbest/celoPets/assets/6362475/142ad1b0-085d-4b95-ab8a-e93e4381d879)
+
+![6](https://github.com/emiridbest/celoPets/assets/6362475/88932bb9-4c28-43fc-95b2-56583acea607)
+
+![7](https://github.com/emiridbest/celoPets/assets/6362475/56c83ac6-1c70-4384-8bd3-464a035e8b79)
+
+![8](https://github.com/emiridbest/celoPets/assets/6362475/a944396b-11ce-49c8-b8a8-6c7a5a3567e6)
+
+![9](https://github.com/emiridbest/celoPets/assets/6362475/f9a52330-b190-4be6-a4e0-faeef29d9fe2)
+
+![10](https://github.com/emiridbest/celoPets/assets/6362475/8a3ad71f-ec08-43ee-a884-f04723642a82)
